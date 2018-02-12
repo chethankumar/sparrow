@@ -5,9 +5,7 @@ import { pink900 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import { Card, Button } from 'carbon-components-react';
 import _ from 'lodash';
-import MainApp from '../mainapp/MainApp';
 import Login from '../login/Login';
 
 const defaultProps = {
@@ -35,7 +33,7 @@ export default class Overview extends React.Component {
     return (
       <div>
         <MuiThemeProvider muiTheme={muiTheme} style={{ height: '100%' }}>
-          {!_.isEmpty(this.props.user) ? <MainApp /> : <Login />}
+          {!_.isEmpty(this.props.user) ? null : <Login />}
         </MuiThemeProvider>
       </div>
     );

@@ -45,5 +45,4 @@ this.db.once('open', () => {
 
 
 require('./routes/v1Api');
-require('./jsonserver/JSONServer').loadJSONs();
 

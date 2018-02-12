@@ -1,6 +1,5 @@
 const response = require('../utils/Response');
 const mongoose = require('mongoose');
-const { configureJSON } = require('../jsonserver/JSONServer');
 const { log, db } = require('../server');
 const { UserSchema } = require('../models/UserModel');
 
