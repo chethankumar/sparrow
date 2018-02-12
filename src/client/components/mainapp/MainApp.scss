@@ -1,0 +1,17 @@
+.mainapp {
+  margin:40px;
+  height:100vh !important;
+
+  .customRow{
+      height:100vh !important;
+  }
+
+  h1 {
+    color: $light-blue;
+    font-weight: 100;
+  }
+
+  .user{
+    text-align: right;
+  }
+}

@@ -1,0 +1,32 @@
+.login{
+    padding-left:0;
+    padding-right:0;
+    height:100vh !important;
+    
+    .customRow{
+        height:100vh !important;
+    }
+
+    .leftPart{
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: #006eb0 !important;
+        .row{
+            align-items: center;
+        }
+    }
+
+    .rightPart{
+        background-color: #fff;
+        padding-left:40px;
+        padding-right: 40px;
+        padding-top:160px;
+        color:rgb(0, 110, 176) !important;
+        .bx--form-item{
+            margin: 0,
+        }
+        
+    }
+}
