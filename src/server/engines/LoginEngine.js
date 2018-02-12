@@ -39,7 +39,6 @@ module.exports.login = (req, res) => {
     if (userArray.length === 0) {
       return response.notFound(req, res, { message: 'User doesnt exist' });
     }
-    configureJSON(userArray[0].email);
     return response.ok(req, res, userArray[0]);
   });
 };

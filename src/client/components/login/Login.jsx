@@ -59,7 +59,7 @@ export default class Login extends React.Component {
             </Row>
           </Col>
           <Col md={5} className="rightPart" >
-            <h1>Quick Server</h1>
+            <h1>Sparrow</h1>
             <br /><br />
             <TextField
               id="emailId"
