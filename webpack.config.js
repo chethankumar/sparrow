@@ -29,12 +29,7 @@ var webpackConfig = {
     new HtmlWebpackPlugin({
       template: Path.join(__dirname, './src/index.html'),
     }),
-    new CopyWebpackPlugin([
-      {
-        from: 'node_modules/monaco-editor/min/vs',
-        to: 'vs',
-      }
-    ]),
+    
   ],
   module: {
     loaders: [{

@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const blocked = require('blocked');
 const logger = require('./utils/Logger');
 const mongoose = require('mongoose');
-const jsonServer = require('json-server');
 
 const app = express();
 const Path = require('path');
@@ -17,7 +16,6 @@ app.use(express.static('./'));
 app.use(express.static('dist'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(jsonServer.bodyParser);
 
 app.get(['/overview'], (req, res) => {
   res.sendFile(Path.resolve('dist/index.html'));
