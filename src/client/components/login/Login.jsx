@@ -53,33 +53,32 @@ export default class Login extends React.Component {
           </div>
         : null}
         <Row className="customRow">
-          <Col md={7} className="leftPart" >
-            <Row center="xs">
-              <h1>Login</h1>
-            </Row>
-          </Col>
-          <Col md={5} className="rightPart" >
-            <h1>Sparrow</h1>
+          <Col md={12} className="page" >
+            <h1 className="header">Sparrow</h1>
             <br /><br />
-            <TextField
-              id="emailId"
-              floatingLabelText="Email Id"
-              onChange={e => this.emailOnChange(e)}
-            />
-            <br /><br />
-            <TextField
-              id="password"
-              floatingLabelText="Password"
-              type="password"
-              onChange={e => this.passwordOnChange(e)}
-            />
-            <br /><br />
-            {this.props.hasErrored ?
-              <div>
-                <p className="err">{this.props.errorDetails}</p>
-              </div> : null}
-            <Button primary onClick={() => this.loginUser()} >Login</Button>
-            <Button >Sign up</Button>
+            <div className="loginStuff">
+              <TextField
+                id="emailId"
+                floatingLabelText="Email Id"
+                onChange={e => this.emailOnChange(e)}
+              />
+              <br /><br />
+              <TextField
+                id="password"
+                floatingLabelText="Password"
+                type="password"
+                onChange={e => this.passwordOnChange(e)}
+              />
+              <br /><br />
+              {this.props.hasErrored ?
+                <div>
+                  <p className="err">{this.props.errorDetails}</p>
+                </div> : null}
+              <div className="btns">
+                <Button className="loginBtn" onClick={() => this.loginUser()} >Login</Button>
+                <Button className="signupBtn" >Sign up</Button>
+              </div>
+            </div>
           </Col>
         </Row>
       </Grid>

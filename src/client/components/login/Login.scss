@@ -1,22 +1,77 @@
 .login{
     padding-left:0;
     padding-right:0;
+    background-image: url('/images/dan-gold.png');
     height:100vh !important;
+
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
     
     .customRow{
         height:100vh !important;
-    }
 
-    .leftPart{
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        background-color: #006eb0 !important;
-        .row{
-            align-items: center;
+        .page{
+            color: #fff;
+            background-color: #006eb0 !important;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .header{
+                margin-bottom: 8rem;
+                margin-left: 4rem;
+                align-self: flex-end;
+                font-size: 6rem;
+                font-weight: 100;
+            }
+
+            .loginStuff{
+                align-self: center;
+                margin: 6rem;
+                display: flex;
+                flex-direction: column;
+
+                .btns{
+                    justify-content: space-around;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+
+                .loginBtn{
+                    border-radius: 4rem !important;
+                    color: #006eb0;
+                    background-color: #fff;
+
+                    > button{
+                        border-radius: 4rem !important;
+
+                        &:hover{
+                            border-radius: 4rem !important;
+                        }
+                    }
+                }
+
+                .signupBtn{
+                    border-radius: 4rem !important;
+                    color: #006eb0;
+                    background-color: rgb(192, 189, 189);
+
+                    > button{
+                        border-radius: 4rem !important;
+
+                        &:hover{
+                            border-radius: 4rem !important;
+                        }
+                    }
+                }
+            }
         }
     }
+
+    
 
     .rightPart{
         background-color: #fff;

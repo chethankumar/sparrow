@@ -13,7 +13,8 @@ this.log.level('debug');
 module.exports.router = express.Router();
 module.exports.app = app;
 app.use(express.static('./'));
-app.use(express.static('dist'));
+app.use('/', express.static('dist'));
+app.use(express.static('static'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
