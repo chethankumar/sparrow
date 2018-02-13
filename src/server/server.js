@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const blocked = require('blocked');
+const path = require('path');
 const logger = require('./utils/Logger');
 const mongoose = require('mongoose');
 
@@ -13,8 +14,8 @@ this.log.level('debug');
 module.exports.router = express.Router();
 module.exports.app = app;
 app.use(express.static('./'));
-app.use('/', express.static('dist'));
-app.use(express.static('static'));
+app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, '../../static')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

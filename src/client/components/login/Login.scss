@@ -1,7 +1,9 @@
 .login{
     padding-left:0;
     padding-right:0;
-    background-image: url('/images/dan-gold.png');
+    background-image: url('https://raw.githubusercontent.com/chethankumar/sparrow/master/static/images/dan-gold.jpg');
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(43, 44, 44, 0.48);
     height:100vh !important;
 
     .row{
@@ -14,7 +16,7 @@
 
         .page{
             color: #fff;
-            background-color: #006eb0 !important;
+            // background-color: #006eb0 !important;
             display:flex;
             flex-direction: row;
             justify-content: space-between;
@@ -57,7 +59,7 @@
                 .signupBtn{
                     border-radius: 4rem !important;
                     color: #006eb0;
-                    background-color: rgb(192, 189, 189);
+                    background-color: rgba(192, 189, 189, 0.212);
 
                     > button{
                         border-radius: 4rem !important;
