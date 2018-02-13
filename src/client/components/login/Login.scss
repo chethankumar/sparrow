@@ -53,10 +53,12 @@
 
                 .selected{
                     color: #fff;
+                    font-weight: 400 !important;
                 }
 
                 .unselected{
                     color: rgb(221, 217, 217);
+                    font-weight: 200 !important;
                 }
 
                 input{
@@ -90,7 +92,7 @@
                     color: #006eb0;
                     background-color: #fff;
                     width: 100%;
-                    
+
                     > button{
                         border-radius: 4rem !important;
                         background-color: #fff;
