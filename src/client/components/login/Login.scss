@@ -34,9 +34,37 @@
                 margin: 6rem;
                 display: flex;
                 flex-direction: column;
+                width: 20%;
+
+                .labels{
+                    display: flex;
+                    flex-direction: row !important;
+                    justify-content: space-around;
+                    align-items: baseline;
+                    p{
+                        font-weight: 400;
+                    }
+                    h1{
+                        font-weight: 200;
+                        cursor: pointer;
+                    }
+                    margin-bottom: 1rem;
+                }
+
+                .selected{
+                    color: #fff;
+                }
+
+                .unselected{
+                    color: rgb(221, 217, 217);
+                }
+
+                input{
+                    border-radius: 4rem;
+                    
+                }
 
                 .btns{
-                    justify-content: space-around;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
@@ -46,6 +74,7 @@
                     border-radius: 4rem !important;
                     color: #006eb0;
                     background-color: #fff;
+                    width: 100%;
 
                     > button{
                         border-radius: 4rem !important;
@@ -59,10 +88,12 @@
                 .signupBtn{
                     border-radius: 4rem !important;
                     color: #006eb0;
-                    background-color: rgba(192, 189, 189, 0.212);
-
+                    background-color: #fff;
+                    width: 100%;
+                    
                     > button{
                         border-radius: 4rem !important;
+                        background-color: #fff;
 
                         &:hover{
                             border-radius: 4rem !important;
@@ -73,17 +104,4 @@
         }
     }
 
-    
-
-    .rightPart{
-        background-color: #fff;
-        padding-left:40px;
-        padding-right: 40px;
-        padding-top:160px;
-        color:rgb(0, 110, 176) !important;
-        .bx--form-item{
-            margin: 0,
-        }
-        
-    }
 }

@@ -1,9 +1,7 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { connect } from 'react-redux';
-import Button from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
-import CircularProgress from 'material-ui/CircularProgress';
+import { Button, Input, Loader } from 'semantic-ui-react';
 import { login } from '../../actions/login/LoginActions';
 
 @connect(store => ({
@@ -18,14 +16,29 @@ export default class Login extends React.Component {
     this.state = {
       email: '',
       password: '',
+      login: true,
     };
     this.loginUser = this.loginUser.bind(this);
     this.emailOnChange = this.emailOnChange.bind(this);
     this.passwordOnChange = this.passwordOnChange.bind(this);
+    this.selectSignUp = this.selectSignUp.bind(this);
+    this.selectLogin = this.selectLogin.bind(this);
   }
 
   componentDidMount() {
 
+  }
+
+  selectLogin() {
+    this.setState({
+      login: true,
+    });
+  }
+
+  selectSignUp() {
+    this.setState({
+      login: false,
+    });
   }
 
   emailOnChange(e) {
@@ -49,7 +62,7 @@ export default class Login extends React.Component {
       <Grid fluid className="login">
         {this.props.isLoginLoading ?
           <div className="overlay ">
-            <CircularProgress />
+            <Loader active />
           </div>
         : null}
         <Row className="customRow">
@@ -57,15 +70,26 @@ export default class Login extends React.Component {
             <h1 className="header">Sparrow</h1>
             <br /><br />
             <div className="loginStuff">
-              <TextField
+              <div className="labels">
+                <h1
+                  className={this.state.login ? 'selected' : 'unselected'}
+                  onClick={() => this.selectLogin()}
+                >Log In
+                </h1><p> or </p><h1
+                  className={this.state.login ? 'unselected' : 'selected'}
+                  onClick={() => this.selectSignUp()}
+                >Sign Up
+                                </h1>
+              </div>
+              <Input
                 id="emailId"
-                floatingLabelText="Email Id"
+                placeholder="Email Id"
                 onChange={e => this.emailOnChange(e)}
               />
               <br /><br />
-              <TextField
+              <Input
                 id="password"
-                floatingLabelText="Password"
+                placeholder="Password"
                 type="password"
                 onChange={e => this.passwordOnChange(e)}
               />
@@ -75,8 +99,11 @@ export default class Login extends React.Component {
                   <p className="err">{this.props.errorDetails}</p>
                 </div> : null}
               <div className="btns">
-                <Button className="loginBtn" onClick={() => this.loginUser()} >Login</Button>
-                <Button className="signupBtn" >Sign up</Button>
+                {this.state.login ?
+                  <Button className="loginBtn" onClick={() => this.loginUser()} >Login</Button>
+                  :
+                  <Button className="signupBtn" >Sign up</Button>
+                }
               </div>
             </div>
           </Col>
