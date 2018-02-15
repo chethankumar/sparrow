@@ -3,14 +3,15 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import { connect } from 'react-redux';
 import { Button, Input, Loader } from 'semantic-ui-react';
 import { login } from '../../actions/login/LoginActions';
+import { withRouter } from 'react-router-dom';
 
-@connect(store => ({
-  user: store.login.user,
-  isLoginLoading: store.login.isLoginLoading,
-  hasErrored: store.login.hasErrored,
-  errorDetails: store.login.errorDetails,
-}))
-export default class Login extends React.Component {
+// @connect(store => ({
+//   user: store.login.user,
+//   isLoginLoading: store.login.isLoginLoading,
+//   hasErrored: store.login.hasErrored,
+//   errorDetails: store.login.errorDetails,
+// }))
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -113,3 +114,12 @@ export default class Login extends React.Component {
   }
 }
 
+
+const mapStateToProps = store => ({
+  user: store.login.user,
+  isLoginLoading: store.login.isLoginLoading,
+  hasErrored: store.login.hasErrored,
+  errorDetails: store.login.errorDetails,
+});
+
+export default withRouter(connect(mapStateToProps)(Login));
