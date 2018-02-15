@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { connect } from 'react-redux';
-import { Button, Input, Loader } from 'semantic-ui-react';
 import { login } from '../../actions/login/LoginActions';
 import { withRouter } from 'react-router-dom';
 
@@ -11,6 +10,7 @@ import { withRouter } from 'react-router-dom';
 //   hasErrored: store.login.hasErrored,
 //   errorDetails: store.login.errorDetails,
 // }))
+
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -63,7 +63,7 @@ class Login extends React.Component {
       <Grid fluid className="login">
         {this.props.isLoginLoading ?
           <div className="overlay ">
-            <Loader active />
+            <p>Loading....</p>
           </div>
         : null}
         <Row className="customRow">
@@ -82,13 +82,13 @@ class Login extends React.Component {
                 >Sign Up
                                 </h1>
               </div>
-              <Input
+              <input
                 id="emailId"
                 placeholder="Email Id"
                 onChange={e => this.emailOnChange(e)}
               />
               <br /><br />
-              <Input
+              <input
                 id="password"
                 placeholder="Password"
                 type="password"
@@ -101,9 +101,9 @@ class Login extends React.Component {
                 </div> : null}
               <div className="btns">
                 {this.state.login ?
-                  <Button className="loginBtn" onClick={() => this.loginUser()} >Login</Button>
+                  <button className="loginBtn" onClick={() => this.loginUser()} >Login</button>
                   :
-                  <Button className="signupBtn" >Sign up</Button>
+                  <button className="signupBtn" >Sign up</button>
                 }
               </div>
             </div>
