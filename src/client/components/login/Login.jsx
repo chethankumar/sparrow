@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { connect } from 'react-redux';
-import { login } from '../../actions/login/LoginActions';
 import { withRouter } from 'react-router-dom';
+import { login } from '../../actions/login/LoginActions';
 
 // @connect(store => ({
 //   user: store.login.user,

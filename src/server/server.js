@@ -20,27 +20,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get(['/*'], (req, res) => {
-    res.sendFile(Path.resolve('dist/index.html'));
+  res.sendFile(Path.resolve('dist/index.html'));
 });
-
 
 const port = process.env.PORT || 3001;
 
 blocked((ms) => {
-    this.log.error(`************************** BLOCKED for ${ms} ms.`);
+  this.log.error(`************************** BLOCKED for ${ms} ms.`);
 });
 
 
 app.listen(port, () => {
-    this.log.info(`app listening on ${port}`);
+  this.log.info(`app listening on ${port}`);
 });
 
 mongoose.connect('mongodb://chethan21:chethan21@ds119018.mlab.com:19018/quickserver');
 module.exports.db = mongoose.connection;
 this.db.on('error', () => { this.log.error('connection error:'); });
 this.db.once('open', () => {
-    // we're connected!
-    this.log.info('Connected to Mongo DB');
+  // we're connected!
+  this.log.info('Connected to Mongo DB');
 });
 
 

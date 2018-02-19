@@ -28,11 +28,11 @@ module.exports = {
             name: 'shared',
             minChunks: Infinity
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compressor: {
-                warnings: false,
-            },
-        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compressor: {
+        //         warnings: false,
+        //     },
+        // }),
     ],
     output: {
         path: path.resolve('dist'),
