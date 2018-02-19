@@ -1,0 +1,19 @@
+.category-wrapper{
+    width: 100%;
+    padding-top:2rem;
+    padding-bottom:2rem;
+    
+    .row{
+        width: 100%;
+    }
+
+    .category-header{
+        margin:2rem 0 2rem 2rem;
+    }
+
+    .category-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
