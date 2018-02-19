@@ -1,0 +1,20 @@
+.top-notification-ecomm {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    background: #fae596;
+    margin: 0 !important;
+    .notifcation-wrapper {
+        width: 80%;
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+    }
+    .notification-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
