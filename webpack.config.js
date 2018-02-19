@@ -36,7 +36,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve('dist'),
-        filename: 'filename[name].js'
+        filename: '[name].js'
     },
     module: {
         loaders: [
