@@ -1,4 +1,5 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 export default class Home extends React.Component {
@@ -18,7 +19,8 @@ export default class Home extends React.Component {
       <Grid fluid className="Home">
         <Row>
           <Col xs={6}>
-            <button>Login</button>
+            <RaisedButton label="Login" onClick={this.setLoginPage} />
+            {/* <button>Login</button> */}
           </Col>
         </Row>
       </Grid>
