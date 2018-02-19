@@ -1,4 +1,20 @@
 .slider{
-    min-height: 0;
-    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.prev-arrow{
+    display: 'inline-flex';
+    background: 'red';
+    z-index: 99 !important;
+    cursor: pointer;
+}
+
+.next-arrow{
+    position: absolute;
+    right: 0;
+    z-index: 99 !important;
+    cursor: pointer;
 }

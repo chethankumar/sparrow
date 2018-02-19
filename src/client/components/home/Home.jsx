@@ -17,14 +17,12 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <Grid fluid className="Home">
-        <Row>
-          <Col xs={6}>
-            <RaisedButton label="Login" onClick={this.setLoginPage} />
-            <Carousal />
-          </Col>
-        </Row>
-      </Grid>
+      <Row className="home-wrapper">
+        <Col xs={6}>
+          <RaisedButton label="Login" onClick={this.setLoginPage} />
+        </Col>
+        <Carousal />
+      </Row>
     );
   }
 }
