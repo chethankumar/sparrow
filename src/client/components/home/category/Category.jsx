@@ -2,22 +2,25 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Icons from 'react-icons-kit';
 import { arrowLeft } from 'react-icons-kit/fa/arrowLeft';
+import { bed } from 'react-icons-kit/fa/bed';
+import { ic_local_dining } from 'react-icons-kit/md/ic_local_dining';
+import { ic_tv } from 'react-icons-kit/md/ic_tv';
 
 const categoryList = [{
   name: 'Sofa',
-  icon: '',
+  icon: arrowLeft,
 },
 {
   name: 'Beds',
-  icon: '',
+  icon: bed,
 },
 {
   name: 'Dining',
-  icon: '',
+  icon: ic_local_dining,
 },
 {
   name: 'TV Units',
-  icon: '',
+  icon: ic_tv,
 }];
 
 export default class Home extends React.Component {
@@ -33,7 +36,7 @@ export default class Home extends React.Component {
     categoryList.map((category) => {
       list.push(<Col xs>
         <Row center="xs">
-          <Icons size={32} icon={arrowLeft} />
+          <Icons size={32} icon={category.icon} />
         </Row>
         <Row center="xs">
           {category.name}
